@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://root:<db_password>@cluster0.btpkomm.mongodb.net/');
+mongoose.connect('mongodb+srv://root:cE2kZ3WvucIjfFw2@cluster0.btpkomm.mongodb.net/');
 mongoose.connection.on('connected', () => {
   console.log('Connected to MongoDB');
 });
@@ -43,5 +43,5 @@ app.get('/api/patients', async (req, res) => {
   }
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 9000;
 app.listen(port, () => console.log(`Server running on port ${port}`));
