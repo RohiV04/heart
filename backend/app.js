@@ -6,8 +6,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-
-mongoose.connect('mongodb+srv://root:cE2kZ3WvucIjfFw2@cluster0.btpkomm.mongodb.net/');
+// change the connection string to your own MongoDB database
+mongoose.connect('...');
 mongoose.connection.on('connected', () => {
   console.log('Connected to MongoDB');
 });
